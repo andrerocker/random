@@ -35,6 +35,11 @@ int receive_all_data(int fd) {
     read_bytes = recv(fd, buffer, MAX_DATA_SIZE, 0);
     buffer[read_bytes] = '\0';
     printf("%s", buffer);
+
+    if(!read_bytes){
+      close(fd);
+      exit(0);
+    }
   }
 }
 
