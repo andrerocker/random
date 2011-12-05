@@ -7,7 +7,9 @@
 #include <sys/socket.h>
 #include <netinet/in.h>
 
-int socket_server() {
+#define MAX_DATA_SIZE 1024
+
+int connect_socket() {
   int sock = socket(AF_INET, SOCK_STREAM, 0);
   check_error(sock, "problemas ao criar socket");
 
@@ -22,7 +24,18 @@ int socket_server() {
   int conn = connect(sock, (struct sockaddr *) &sock_struct, sizeof(sock_struct));
   check_error(conn, "problemas ao se conectar no server");
 
-  return conn;
+  return sock;
+}
+
+int receive_all_data(int fd) {
+  char buffer[MAX_DATA_SIZE];
+  int read_bytes;
+
+  while(1) {
+    read_bytes = recv(fd, buffer, MAX_DATA_SIZE, 0);
+    buffer[read_bytes] = '\0';
+    printf("%s", buffer);
+  }
 }
 
 int check_error(int fd, char *msg) {
@@ -33,6 +46,7 @@ int check_error(int fd, char *msg) {
 }
 
 int main(int argc, char **argv) {
-  int sock = socket_server();
+  int sock = connect_socket();
+  receive_all_data(sock);
   return 0;
 }
