@@ -1,5 +1,5 @@
 #/bin/bash
-system=$(uname -s);
+system=$(uname -s)
 port=1337
 
 if [[ $system == "Linux" ]]
