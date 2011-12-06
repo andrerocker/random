@@ -1,2 +1,2 @@
 #/bin/bash
-nc -l -p 1337
+nc -l 1337 < client.c
