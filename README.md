@@ -1,7 +1,5 @@
-Estudos
-=======
-
-Esse repositorio possui um serie de fragmentos/codigos em diversas linguagens que vou criando/estudando ao redor do tempo
+Experimentos Aleatorios
+=======================
 
 * socket em c
 * python bottle web framework
