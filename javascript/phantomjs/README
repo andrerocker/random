@@ -1,0 +1,7 @@
+Brincadeira com PhantomJS + Lance de Suplementos
+
+***** Esse script é apenas uma prova de conceito *****
+***** Se vier a utilizar ele para trapacear é de sua exclusiva responsabilidade *****
+
+A ideia basica é utilizar o phantomjs (headless) para modificar os hooks javascript do 
+site e dar lances apenas em oportunidades legais. (ultimo segundo)
