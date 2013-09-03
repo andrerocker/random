@@ -1,7 +1,15 @@
 Experimentos Aleatorios
 =======================
 
-* socket em c
-* python bottle web framework
-* python twisted port_forward
-* exeperimentos com phantomjs
+### C
+* Exemplo simples de sockets
+
+### Python
+* Exemplo de utilização do bottle (framework web)
+* Exemplo de Port Forward (usando twisted)
+
+### Javascript
+* Exeperimentos com phantomjs (script para "roubar" no site lance de suplementos)
+
+### Go
+* Exemplo de Port Forward (usando stdlib)
